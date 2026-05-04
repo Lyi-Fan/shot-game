@@ -307,10 +307,10 @@ export function Enemy({ data }: { data: EnemyData }) {
         <mesh castShadow position={[0, 1.8, 0]}>
           <boxGeometry args={[0.7, 0.7, 0.7]} />
           <meshStandardMaterial 
-            color={data.state === 'disabled' ? '#222' : '#2a2a2a'} 
+            color={data.state === 'disabled' ? '#444444' : '#f8fafc'} 
             roughness={0.4} 
           />
-          {data.state === 'active' && <Outlines thickness={0.03} color="#00e5ff" />}
+          {data.state === 'active' && <Outlines thickness={0.03} color="#ff3300" />}
         </mesh>
         
         {/* Eye / Visor (used to be core ref for color) */}
@@ -318,7 +318,7 @@ export function Enemy({ data }: { data: EnemyData }) {
           <boxGeometry args={[0.5, 0.2, 0.05]} />
           <meshStandardMaterial 
             color={data.state === 'disabled' ? '#111' : '#ffffff'} 
-            emissive={data.state === 'disabled' ? '#000' : '#00e5ff'}
+            emissive={data.state === 'disabled' ? '#000' : '#ff3300'}
             emissiveIntensity={data.state === 'active' ? 4 : 0}
           />
         </mesh>
@@ -326,34 +326,34 @@ export function Enemy({ data }: { data: EnemyData }) {
         {/* Body */}
         <mesh castShadow position={[0, 1.05, 0]}>
           <boxGeometry args={[0.8, 0.8, 0.4]} />
-          <meshStandardMaterial color={data.state === 'disabled' ? '#222' : '#1f1f1f'} roughness={0.5} />
-          {data.state === 'active' && <Outlines thickness={0.03} color="#00e5ff" />}
+          <meshStandardMaterial color={data.state === 'disabled' ? '#333333' : '#e2e8f0'} roughness={0.5} />
+          {data.state === 'active' && <Outlines thickness={0.03} color="#ff3300" />}
         </mesh>
 
         {/* Arms */}
         <mesh castShadow position={[-0.55, 1.05, 0]}>
           <boxGeometry args={[0.25, 0.8, 0.25]} />
-          <meshStandardMaterial color={data.state === 'disabled' ? '#222' : '#1a1a1a'} roughness={0.5} />
-          {data.state === 'active' && <Outlines thickness={0.03} color="#00e5ff" />}
+          <meshStandardMaterial color={data.state === 'disabled' ? '#222222' : '#cbd5e1'} roughness={0.5} />
+          {data.state === 'active' && <Outlines thickness={0.03} color="#ff3300" />}
         </mesh>
         {/* Gun Arm */}
         <mesh castShadow position={[0.55, 1.05, 0.2]}>
           <boxGeometry args={[0.25, 0.3, 0.8]} />
-          <meshStandardMaterial color={data.state === 'disabled' ? '#222' : '#111111'} roughness={0.5} />
-          {data.state === 'active' && <Outlines thickness={0.03} color="#00e5ff" />}
+          <meshStandardMaterial color={data.state === 'disabled' ? '#222222' : '#94a3b8'} roughness={0.5} />
+          {data.state === 'active' && <Outlines thickness={0.03} color="#ff3300" />}
         </mesh>
 
         {/* Gun Barrel Tip glowing */}
         <mesh position={[0.55, 1.05, 0.65]}>
           <boxGeometry args={[0.1, 0.1, 0.1]} />
-          <meshBasicMaterial color={data.state === 'disabled' ? '#111' : '#00e5ff'} />
+          <meshBasicMaterial color={data.state === 'disabled' ? '#111' : '#ffaa00'} />
         </mesh>
 
         {/* Base/Legs (hovering block) */}
         <mesh castShadow position={[0, 0.4, 0]}>
           <boxGeometry args={[0.6, 0.5, 0.3]} />
-          <meshStandardMaterial color={data.state === 'disabled' ? '#111' : '#222222'} roughness={0.9} />
-          {data.state === 'active' && <Outlines thickness={0.03} color="#00e5ff" />}
+          <meshStandardMaterial color={data.state === 'disabled' ? '#111' : '#cbd5e1'} roughness={0.9} />
+          {data.state === 'active' && <Outlines thickness={0.03} color="#ff3300" />}
         </mesh>
 
         {/* Username/Health Label */}

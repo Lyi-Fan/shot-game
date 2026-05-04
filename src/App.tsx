@@ -55,7 +55,7 @@ function HUD() {
     <>
       {/* Crosshair */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none flex flex-col items-center justify-center z-10 transition-transform">
-        <div className="relative w-8 h-8 flex items-center justify-center">
+        <div className="relative w-6 h-6 flex items-center justify-center">
           {showHitMarker && (
             <svg className="absolute inset-0 w-full h-full text-white drop-shadow-[0_0_6px_rgba(255,255,255,1)] opacity-80" viewBox="0 0 100 100">
               <line x1="25" y1="25" x2="45" y2="45" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
@@ -66,13 +66,13 @@ function HUD() {
           )}
           <div className="relative flex items-center justify-center">
             {/* Top */}
-            <div className={`absolute w-[2px] h-2 -translate-y-2 ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
+            <div className={`absolute w-[2px] h-[5px] -translate-y-[5px] ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
             {/* Bottom */}
-            <div className={`absolute w-[2px] h-2 translate-y-2 ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
+            <div className={`absolute w-[2px] h-[5px] translate-y-[5px] ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
             {/* Left */}
-            <div className={`absolute w-2 h-[2px] -translate-x-2 ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
+            <div className={`absolute w-[5px] h-[2px] -translate-x-[5px] ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
             {/* Right */}
-            <div className={`absolute w-2 h-[2px] translate-x-2 ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
+            <div className={`absolute w-[5px] h-[2px] translate-x-[5px] ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
             {/* Center dot */}
             <div className={`absolute w-[2px] h-[2px] ${playerState === 'disabled' ? 'bg-red-500' : 'bg-green-400'}`} />
           </div>
